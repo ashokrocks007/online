@@ -11,5 +11,13 @@ pipeline{
                 sh "docker build -t kiran023/obstore:01 ."
             }
         }
+        stage("docker push"){
+            steps{
+                withCredentials([usernamePassword(credentialsId: 'dockerhub', passwordVariable: 'pswd', usernameVariable: 'user')]) {
+                    sh "docker login -u ${user} -p ${pswd}"
+                    sh "docker push kiran023/obstore:01"
+                }
+            }
+        }
     }
 }
