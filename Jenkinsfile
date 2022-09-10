@@ -8,7 +8,7 @@ pipeline{
         }
          stage("docker build"){
             steps{
-                sh "docker build -t kiran023/obstore:01"
+                sh "docker build -t kiran023/obstore:01 ."
             }
         }
     }
