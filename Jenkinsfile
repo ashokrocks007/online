@@ -6,5 +6,10 @@ pipeline{
                 sh "mvn clean package"
             }
         }
+         stage("docker build"){
+            steps{
+                sh "docker build -t kiran023/obstore:01"
+            }
+        }
     }
 }
