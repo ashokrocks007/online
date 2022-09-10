@@ -3,7 +3,7 @@ pipeline{
     stages{
         stage("git checkout"){
             steps{
-                git url: "https://github.com/kiranreddy023/onlinebookstore"
+                git url: "https://github.com/kiranreddy023/onlinebookstore", branch: "main"
             }
         }
         stage("maven build"){
