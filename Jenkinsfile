@@ -1,11 +1,18 @@
 pipeline{
     agent any
     stages{        
-        stage("maven build"){
+       /* stage("maven build"){
             steps{
                 sh "mvn clean package"
             }
+        }*/
+        stage("nexus pull"){
+            steps{
+                sh "wget --username=admin --password=kiran23 http://43.204.110.228:8081/repository/kiran/in/kkrv/Kiran/0.1/Kiran-0.1.war"
+            }
         }
+        
+        
          stage("docker build"){
             steps{
                 sh "docker build -t kiran023/obstore:01 ."
