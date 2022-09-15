@@ -8,7 +8,7 @@ pipeline{
         }*/
         stage("nexus pull"){
             steps{
-                sh "wget --username=admin --password=kiran23 http://43.204.110.228:8081/repository/kiran/in/kkrv/Kiran/0.1/Kiran-0.1.war"
+                sh "wget --user=admin --password=kiran23 http://43.204.110.228:8081/repository/kiran/in/kkrv/Kiran/0.1/Kiran-0.1.war"
             }
         }
         
