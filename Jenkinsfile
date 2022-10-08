@@ -15,7 +15,7 @@ pipeline{
                 nexusUrl: '15.206.167.226:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
-                repository: 'kiran',
+                repository: 'maven-hosted',
                 version: '0.1'
             }
         }
