@@ -12,7 +12,7 @@ pipeline{
                 nexusArtifactUploader artifacts: [[artifactId: 'obstore', classifier: '', file: 'target/obstore-0.1.war', type: 'war']],
                 credentialsId: 'nexus',
                 groupId: 'onlinebookstore', 
-                nexusUrl: '15.206.167.226:8081', 
+                nexusUrl: '123.123.52.43:8081', 
                 nexusVersion: 'nexus3', 
                 protocol: 'http', 
                 repository: 'maven-hosted',
