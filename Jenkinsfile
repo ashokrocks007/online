@@ -36,7 +36,7 @@ pipeline{
             steps{
                 withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'pswd', usernameVariable: 'user')]) {
                     sh "docker login -u ${user} -p ${pswd}"
-                    sh "docker push kiran023/obstore:01"
+                    sh "docker push kiran023/obstore:02"
                 }
             }
         }
