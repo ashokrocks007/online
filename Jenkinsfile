@@ -7,6 +7,7 @@ pipeline{
             }
         }
 
+        /* 
         stage("uploading to nexus"){
             steps{
                 nexusArtifactUploader artifacts: [[artifactId: 'obstore', classifier: '', file: 'target/obstore-0.1.war', type: 'war']],
@@ -19,6 +20,7 @@ pipeline{
                 version: '0.1'
             }
         }
+        */
         /*
         stage("nexus pull"){
             steps{
