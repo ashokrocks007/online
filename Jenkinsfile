@@ -34,6 +34,7 @@ pipeline{
                 sh "docker build -t kiran023/obstore:02 ."
             }
         }
+        /*
         stage("docker push"){
             steps{
                 withCredentials([usernamePassword(credentialsId: 'docker', passwordVariable: 'pswd', usernameVariable: 'user')]) {
@@ -42,6 +43,7 @@ pipeline{
                 }
             }
         }
+        */
         /*
         stage("docker deploy"){
             steps{
